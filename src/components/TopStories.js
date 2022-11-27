@@ -11,7 +11,7 @@ function TopStories() {
         if(!response.ok) {
           throw new Error(`${response.status}: ${response.statusText}`);
         } else {
-          response.json()
+          return response.json()
         }
       })
       .then((jsonifiedResponse) => {
